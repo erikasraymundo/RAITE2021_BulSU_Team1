@@ -6,7 +6,7 @@ if (isset($_POST)) {
     $crew_id = getCrewID();
     $fname = $_POST["fname"];
     $lname = $_POST["lname"];
-    $gender = $_POST["gender"];
+    $sex = $_POST["sex"];
     $bdate = $_POST["bdate"];
     $email = $_POST["email"];
     $contact_no = $_POST["contact_no"];

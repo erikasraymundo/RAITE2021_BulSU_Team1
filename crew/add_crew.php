@@ -11,7 +11,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/logout.js"></script>
     <!-- Customized -->
     <script src="../js/add_crew.js"></script>
 </head>
@@ -29,7 +28,7 @@
 
 
     <label>Birthdate</label>
-    <input type='datetime' name='bdate' placeholder='Enter birthdate' id="bdate"></input>
+    <input type="datetime" id="birthdaytime" name="birthdaytime">
 
 
     <label>Sex</label>

@@ -2,15 +2,18 @@ $(document).ready(function () {
 
     $("#btn-submit").click(function () {
   
-      var fname = $("fname").val().trim();
-      var lname = $("fname").val().trim();
-      var bdate = $("#bdate").val().trim();
-      var sex = $('input[name=gender]:checked').val().trim();
-      var address = $("address").val().trim();
-      var email = $("email").val().trim();
-      var contact_no = $("contact_no").val().trim();
-      var rank = $('#rank option:selected').trim();
-      var ship_id = $("#ship option:selected").val().trim();
+
+      alert("test");
+
+      var fname = $("#fname").val().trim();
+      var lname = $("#lname").val().trim();
+      var bdate = $("#bdate").val();
+      var sex = $('input[name=gender]:checked').val();
+      var address = $("#address").val().trim();
+      var email = $("#email").val().trim();
+      var contact_no = $("#contact_no").val().trim();
+      var rank = $('#rank option:selected').val();
+      var ship_id = $("#ship option:selected").val();
 
       if (fname=="" || lname == "" || sex=="" || address == "" || email == "" || contact_no=="" || rank=="" || ship_id=="") {
         Swal.fire({
@@ -18,8 +21,7 @@ $(document).ready(function () {
           title: 'Please enter all the required fields'
         })
       } else {
-
-        $.post("../action/save_crew.php",
+        $.post("../actions/add_crew.php",
         {
           fname: fname,
           lname: lname,
@@ -33,11 +35,16 @@ $(document).ready(function () {
         }, 
         function (data, result) {
           if(result == "success") {
-            if (data == ok) {
+            if (data == "ok") {
               Swal.fire({
                 icon: 'success',
                 title: 'The crew has been added successfully!'
-              })
+              }).then(() => {
+                //crew page
+                // window.location = "../teacher/quiz_proper.php";
+            })
+            } else {
+              alert("error is " + data);
             }
           }
         })
