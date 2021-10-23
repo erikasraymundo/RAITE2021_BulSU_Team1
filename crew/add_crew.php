@@ -27,6 +27,11 @@
     <label>Address</label>
     <input type='text' name='address' placeholder='Enter address' id="address"></input>
 
+
+    <label>Birthdate</label>
+    <input type='datetime' name='bdate' placeholder='Enter birthdate' id="bdate"></input>
+
+
     <label>Sex</label>
     <input type='radio' name='gender' id='female' value="Female">
     <label for="female">Female</label>

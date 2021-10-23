@@ -17,7 +17,7 @@ CREATE TABLE crew (
 	fname varchar(25) NOT NULL,
 	lname varchar(25) NOT NULL,
 	gender char,
-    bdate datetime NOT NULL,
+    bdate datetime NOT NULL,//patanggal
     address varchar(200) NOT NULL,
     email varchar(50) NOT NULL,
     contact_no varchar(25) NOT NULL,
