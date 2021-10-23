@@ -7,17 +7,18 @@ if (isset($_POST)) {
     $fname = $_POST["fname"];
     $lname = $_POST["lname"];
     $sex = $_POST["sex"];
-    $bdate = $_POST["bdate"];
+    // $bdate = $_POST["bdate"];
+    $address = $_POST["address"];
     $email = $_POST["email"];
     $contact_no = $_POST["contact_no"];
     $rank = $_POST["rank"];
     $ship_id = $_POST["ship_id"];
 
-    $sql = "INSERT INTO crew (crew_id, fname, lname, gender, bdate, email, contact_no, `rank`, ship_id) 
-    VALUES ($fname, $lname, $gender, $bdate, $email, $contact_no, $rank, $ship_id)";
+    $sql = "INSERT INTO crew (crew_id, fname, lname, gender, `address`, email, contact_no, `rank`, ship_id) 
+    VALUES ('$crew_id', '$fname', '$lname', '$sex', '$address', '$email', '$contact_no', '$rank', '$ship_id')";
 
     if ($conn->query($sql) == TRUE) {
-        echo "OK";
+        echo "ok";
     } else {
         echo "Error: " . $conn->error;
     }

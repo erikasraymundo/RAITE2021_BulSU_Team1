@@ -1,5 +1,14 @@
 $(document).ready(function () {
 
+
+	$.post("../actions/select_ship.php", {},
+		function (data, result) {
+			if (result == "success") {
+        $("#ship").html(data);
+      }
+		});
+
+
     $("#btn-submit").click(function () {
   
 
@@ -7,7 +16,7 @@ $(document).ready(function () {
 
       var fname = $("#fname").val().trim();
       var lname = $("#lname").val().trim();
-      var bdate = $("#bdate").val();
+      // var bdate = $("#bdate").val();
       var sex = $('input[name=gender]:checked').val();
       var address = $("#address").val().trim();
       var email = $("#email").val().trim();
@@ -26,7 +35,7 @@ $(document).ready(function () {
           fname: fname,
           lname: lname,
           sex: sex,
-          bdate: bdate,
+          // bdate: bdate,
           address: address,
           email: email,
           contact_no: contact_no,

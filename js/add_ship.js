@@ -13,6 +13,7 @@ $(document).ready(function () {
 		var ship_name = $("#ship_name").val().trim();
 		var speed_class = $('#speed_class option:selected').val();
 		var route = $('#route option:selected').val();
+		var eta = 0;
 
 		if (ship_name == "" || speed_class == "" || route == "") {
 			Swal.fire({
@@ -25,7 +26,8 @@ $(document).ready(function () {
 				{
 					ship_name: ship_name,
 					speed_class: speed_class,
-					route: route
+					route: route,
+					eta: eta
 				},
 				function (data, result) {
 					if (result == "success") {

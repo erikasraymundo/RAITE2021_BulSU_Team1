@@ -32,9 +32,9 @@
 
 
     <label>Sex</label>
-    <input type='radio' name='gender' id='female' value="Female">
+    <input type='radio' name='gender' id='female' value="F">
     <label for="female">Female</label>
-    <input type='radio' name='gender'id='male' value="Male">
+    <input type='radio' name='gender'id='male' value="M">
     <label for="male">Male</label>
 
     <label>Email</label>
@@ -67,7 +67,7 @@
         <option value='steward'>Steward</option>
     </select>
 
-    <select name='ship' id='select_ship'  id="ship">
+    <select name='ship' id="ship">
         <!--ajax-->
     </select>
 
