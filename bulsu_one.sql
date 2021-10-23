@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2021 at 06:07 AM
+-- Generation Time: Oct 23, 2021 at 06:13 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -89,7 +89,8 @@ CREATE TABLE `ship` (
 
 CREATE TABLE `ship_route` (
   `ship_route_id` varchar(8) NOT NULL,
-  `eta` double DEFAULT NULL,
+  `eta` double NOT NULL,
+  `price` double NOT NULL,
   `ship_id` varchar(8) DEFAULT NULL,
   `route_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
