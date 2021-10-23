@@ -38,7 +38,7 @@
             <a href="#"><button class="btn-dashboard"><img src="../images/icon-route.png" height="35" style="margin-left: -13%">ROUTES</button>
             </a>
             <h5 class="txt-user"> Welcome, Admin </h5>
-            <button class="btn-dashboard">LOGOUT</button>
+            <a href="../index.html"><button class="btn-dashboard">LOGOUT</button></a>
         </div>
     </div>
     <div class="right-container" style="padding: 3% 6%;">
