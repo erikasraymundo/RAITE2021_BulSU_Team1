@@ -1,0 +1,48 @@
+a {
+	text-decoration: none;
+}
+
+.footer {
+	background-image: url('../images/blue_wave_bottom.png');
+	background-size: 100% 100%;
+	position: absolute;
+	width: 100%;
+	height: 150px;
+	bottom: 0;
+}
+
+.logo-pic {
+	height: 220px;
+}
+
+.logo-content {
+    position: relative;
+    text-align: center;
+    margin-top: 6%;
+    animation:goes_up 1s ease;
+}
+
+@-webkit-keyframes goes_up{
+    from {margin-top: 16%;} 
+    to{margin-top: 6%;
+    } 
+}
+
+.btn-login-div {
+	left: 0;
+	width: 100%;
+	text-align: center;
+	height: 150px;
+}
+
+#btn-login {
+    margin-top: 3%;
+    animation: role_in 2s;
+}
+
+@-webkit-keyframes role_in{
+    0% {opacity: 0} 
+    25% {opacity: 0} 
+    50% {opacity: 0} 
+    100% {opacity: 1} 
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Log-in to Seafarer </title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="login-main-content">
+		<div class="login-left-div">
+			<img src="images/type_b_logo.png">
+			<h3 class="txt-login-to"> Login to your account </h3>
+				<div class="login-form">
+					<text class="txt-login-details">Email</text><text style="color: red;">*</text>
+					<input type="email" class="form-text" placeholder="Enter your email here....."> </input>
+					<text class="txt-login-details">Password</text><text style="color: red;">*</text>
+					<input type="password" class="form-text" placeholder="Enter your password....."> </input>
+					<text class="txt-login-details">Name</text><text style="color: red;">*</text>
+					<input type="text" class="form-text" placeholder="Enter your name here....."> </input>
+					<button class="btn-login" data-toggle="modal" data-target="#exampleModal">LOGIN</button>
+					<!-- Modal -->
+					<!-- Modal -->
+				</div>
+		</div>
+		<div class="login-right-div">
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+					    <div class="modal-content">
+					      	<div class="modal-header">
+					        	<h5 class="modal-title" id="exampleModalLabel">Confirm Your Identity!</h5>
+					        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          	<span aria-hidden="true">&times;</span>
+					       		</button>
+					      	</div>
+					      	<div class="modal-body">
+							  	<div class="captcha-box">
+								    <canvas id="canvas"></canvas>
+								    <h6>Type The Code:</h6>
+								    <input name="code" class="form-control">
+									<button id="valid" class="btn btn-danger mt-3">Confirm</button>
+								</div>
+					    	</div>
+						</div>
+					</div>
+		</div>
+	</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery-captcha.js"></script>
+    <script>
+      // step-1
+      const captcha = new Captcha($('#canvas'),{
+        length: 4
+      });
+      // api
+      //captcha.refresh();
+      //captcha.getCode();
+      //captcha.valid("");
+
+      $('#valid').on('click', function() {
+        const ans = captcha.valid($('input[name="code"]').val());
+        alert(ans);
+        captcha.refresh();
+      })
+    </script>
+    <script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
