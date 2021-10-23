@@ -67,8 +67,12 @@
 
       $('#valid').on('click', function() {
         const ans = captcha.valid($('input[name="code"]').val());
-        alert(ans);
-        captcha.refresh();
+        if (ans==false){
+        	alert("WRONG CAPTCHA!");
+        }
+        else {
+        	window.location.assign("dashboard.html")
+        }
       })
     </script>
     <script>
