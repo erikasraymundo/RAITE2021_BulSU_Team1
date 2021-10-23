@@ -12,7 +12,10 @@
     <!-- Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Customized -->
-    <script src="../js/add_crew.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+
+    <script src="../js/add_route.js" type="module"></script>
+    <script src="../js/require.js"></script>
 </head>
 
 <body>
@@ -40,7 +43,6 @@
     <label>Longitude</label>
     <input type='text' name='loc1_point_long2' placeholder='Enter longitude' id="loc1_point_long2"></input>
 
-    <button type="submit" id="btn-submit">Save Crew</button>
 
     <!-- 2nd location-->
     
@@ -66,15 +68,7 @@
     <label>Longitude</label>
     <input type='text' name='loc2_point_long2' placeholder='Enter longitude' id="loc2_point_long2"></input>
 
-    <button type="submit" id="btn-submit">Save Crew</button>
-
-    
-
-
-
-
-
-    <button type="submit" id="btn-submit">Save Crew</button>
+    <button type="submit" id="btn-submit">Save Route</button>
 
 </body>
 
