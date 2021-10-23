@@ -9,6 +9,7 @@ CREATE TABLE ship (
 	ship_id varchar(11) NOT NULL,
 	ship_name varchar(25) NOT NULL,
 	speed_class char NOT NULL,
+	
 	PRIMARY KEY (ship_id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
