@@ -10,7 +10,8 @@
     <!-- Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Customized -->
-    <script src="../js/table_crew.js"></script>
+    <script src="../js/add_ship.js" type="module"></script>
+    <script src="../js/table_ship.js"></script>
 </head>
 <body>
     <div class="table">
