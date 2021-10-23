@@ -8,6 +8,7 @@
     <title>Seafarer::Add Crew</title>
     <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
     <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link rel="stylesheet" type="text/css" href="../css/master.css">
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- Sweet Alert -->
@@ -39,6 +40,9 @@
     </div>
 
     <div class="right-container" style="padding: 3% 6%;">
+
+    <h1>Add Crew</h1>
+
         <label>First name</label>
         <input type='text' name='fname' placeholder='Enter first name' id="fname" class="form-text"></input>
         <br>
@@ -99,6 +103,8 @@
             yung text baguhin na lang sa js
             -->
     </div>
+
+    
 </div>
 </body>
 

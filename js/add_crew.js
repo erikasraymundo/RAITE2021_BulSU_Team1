@@ -49,8 +49,8 @@ $(document).ready(function () {
                 icon: 'success',
                 title: 'The crew has been added successfully!'
               }).then(() => {
-                //crew page
-                // window.location = "../teacher/quiz_proper.php";
+                // crew page
+                window.location = "../crew/add_crew.php";
             })
             } else {
               alert("error is " + data);

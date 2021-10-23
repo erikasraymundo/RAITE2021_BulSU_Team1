@@ -1,5 +1,13 @@
 @import url('https://fonts.google.com/specimen/Poppins');
 
-body {
+* {
 	font-family: Poppins;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td, td {
+	padding: 10px;
 }

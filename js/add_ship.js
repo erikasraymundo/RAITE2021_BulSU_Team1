@@ -37,7 +37,7 @@ $(document).ready(function () {
 								title: 'The ship has been added successfully!'
 							}).then(() => {
 								//crew page
-								// window.location = "../teacher/quiz_proper.php";
+                window.location = "../ship/table_ship.php";
 							})
 						} else {
 							alert("error is " + data);
