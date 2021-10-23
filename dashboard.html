@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Dashboard - Seafarer</title>
+	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+</head>
+<body>
+<div class="main-container">
+	<div class="left-container">
+		<div class="logo-images">
+			<img src="images/white_ship.png" height="80"><br>
+			<img src="images/SEAFARER.png" height="20"><br>
+			<img src="images/INTERNATIONAL.png" height="12">
+		</div>
+		<div class="btn-options-div">
+			<button class="btn-dashboard"><img src="images/icon-dashboard.png" height="35">DASHBOARD</button>
+			<button class="btn-dashboard"><img src="images/ic_crew 3.png" height="35" style="margin-left: -20%">CREWS</button>
+			<button class="btn-dashboard"><img src="images/noun_Ship_4313193 1.png" height="30" style="margin-left: -20%">SHIPS</button>
+			<button class="btn-dashboard"><img src="images/icon-route.png" height="35" style="margin-left: -13%">ROUTES</button>
+			<h5 class="txt-user"> Welcome, Admin </h5>
+			<button class="btn-dashboard">LOGOUT</button>
+		</div>
+	</div>
+
+	<div class="right-container">
+		<h1> Dashboard </h1>
+		<canvas id="myChart" width="400" height="400"></canvas>
+
+	</div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+
+</body>
+</html>
